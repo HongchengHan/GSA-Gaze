@@ -1,0 +1,24 @@
+---
+params:
+    batch_size: 32
+    epoch: 20
+    lr: 0.001
+    decay: 1
+    decay_step: 10
+
+save:
+    path: "/data/hanhc/GazeEstimation/GSAL_hhc/runs"
+    exp: eth_1
+    step: 1
+
+data:
+    image: "/data/hanhc/GazeEstimation/datasets/FaceBased/ETH-XGaze/Image/train"
+    label: "/data/hanhc/GazeEstimation/datasets/FaceBased/ETH-XGaze/Label/train.label"
+    header: True
+    name: eth
+    isFolder: False
+
+pretrain: False
+device: 0,1
+reader: reader_adap
+map: "/data/hanhc/GazeEstimation/GSAL_hhc/masker/eth-masker.jpg"
